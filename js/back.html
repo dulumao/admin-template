@@ -1,0 +1,21 @@
+  <div class="ui modal">
+      <div class="ui center aligned grid">
+        <form class="ui form">
+          <div class="inline field">
+              <label>姓名</label>
+              <input type="text" name="first-name" placeholder="姓名">
+          </div>
+          <div class="inline field">
+            <label>邮箱</label>
+            <input type="email" name="last-name" placeholder="邮箱">
+          </div>
+          <button class="ui blue basic button" type="submit">添加</button>
+        </form>
+      </div>
+</div>
+
+<script>
+    $("#addBtn").click(function(){
+        $('.ui.modal').modal('show')
+    })
+</script>
