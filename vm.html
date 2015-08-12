@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="dist/semantic.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>首页</title>
+</head>
+<body>
+<div class="ui secondary menu grid">
+  <a class="blue item active" href="index.html">主页</a>
+  <a class="blue item" href="notice.html">通知</a>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    <a class="ui blue basic button">登出</a>
+  </div>
+</div>
+
+<div class="ui center aligned grid">
+  <div class="two wide column">
+    <div class="ui vertical fluid tabular menu">
+      <a class="blue item" href="index.html">主页</a>
+      <a class="blue item" href="user.html">用户</a>
+      <a class="blue item" href="host.html">主机</a>
+      <a class="blue item" href="template.html">模板</a>
+        <a class="blue item" href="image.html">镜像</a>
+        <a class="blue item active" href="vm.html">虚拟机</a>
+    </div>
+  </div>
+  <div class="fourteen wide stretched column">
+    <div class="ui segment">
+        <div class="ui top attached tabular menu">
+            <a class="blue item active" data-tab="first">虚拟机列表</a>
+            <a class="blue item" data-tab="second">添加虚拟机</a>
+            <a class="blue item" data-tab="third">虚拟机信息</a>
+        </div>
+        <div class="ui bottom attached tab segment active" data-tab="first">
+
+
+            <table class="ui celled table">
+        <thead>
+        <tr>
+          <th>名称</th>
+          <th>属于</th>
+          <th>模板</th>
+          <th>镜像</th>
+          <th>创建时间</th>
+          <th>状态</th>
+          <th>说明</th>
+          <th>操作</th>
+        </tr>
+        </thead>
+          <tbody>
+          <tr>
+            <td>dgbsd</td>
+            <td>少爷</td>
+            <td>1212</td>
+            <td>Arch_linux_100</td>
+            <td>2015-08-10 15:30:21</td>
+            <td bgcolor="#7fff00">runing</td>
+            <td>找呀找呀找朋友</td>
+            <td><a href="#">关机</a> <a href="#">删除</a></td>
+          </tr>
+          <tr>
+            <td>dgbsd</td>
+            <td>少爷</td>
+            <td>1212</td>
+            <td>Arch_linux_100</td>
+            <td>2015-08-10 15:30:21</td>
+            <td bgcolor="#7fff00">runing</td>
+            <td>找呀找呀找朋友</td>
+            <td><a href="#">关机</a> <a href="#">删除</a></td>
+          </tr>
+          <tr>
+            <td>dgbsd</td>
+            <td>少爷</td>
+            <td>1212</td>
+            <td>Arch_linux_100</td>
+            <td>2015-08-10 15:30:21</td>
+            <td bgcolor="#b22222">stop</td>
+            <td>找呀找呀找朋友</td>
+            <td><a href="#">开机</a> <a href="#">删除</a></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+              <th colspan="8">
+                  <div class="ui right floated pagination menu">
+                      <a class="icon item">
+                          <i class="left chevron icon"></i>
+                      </a>
+                      <a class="item">1</a>
+                      <a class="item">2</a>
+                      <a class="item">3</a>
+                      <a class="item">4</a>
+                      <a class="icon item">
+                          <i class="right chevron icon"></i>
+                      </a>
+                  </div>
+              </th>
+          </tr>
+        </tfoot>
+      </table>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="second">
+
+            <form class="ui fluid form">
+                  <div class="inline field">
+                      <label>虚拟机名字</label>
+                      <input type="text" name="first-name" placeholder="虚拟机名字">
+                  </div>
+                  <div class="inline field">
+                    <label>选择模板</label>
+                    <select>
+                        <option value="">无</option>
+                        <option value="0">微型虚拟机模板</option>
+                        <option value="1">小型虚拟机模板</option>
+                        <option value="2">中型虚拟机模板</option>
+                        <option value="3">大型虚拟机模板</option>
+                    </select>
+                  </div>
+                  <div class="inline field">
+                    <label>选择镜像</label>
+                    <select>
+                        <option value="">无</option>
+                        <option value="0">Arch_linux_100</option>
+                        <option value="1">Opensuse_13.2_100</option>
+                        <option value="1">CentOS_7.1_100</option>
+                        <option value="1">CentOS_6.5_100</option>
+                    </select>
+                  </div>
+
+               <div class="inline field">
+              <label>虚拟机描述</label>
+              <textarea rows="3" style="margin-top: 0px; margin-bottom: 0px; height: 76px;"></textarea>
+          </div>
+          <button class="ui blue basic button" type="submit">添加</button>
+          </form>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="third">
+            这个页面只有点击编辑虚拟机信息时才会出现
+        </div>
+
+
+  </div>
+</div>
+
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="dist/semantic.min.js"></script>
+    <script src="js/style.js"></script>
+</body>
+</html>

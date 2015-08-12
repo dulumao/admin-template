@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="dist/semantic.min.css">
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 
     <title>首页</title>
 </head>
 <body>
-<div class="ui secondary  menu">
+<div class="ui secondary menu grid">
   <a class="blue item active" href="index.html">主页</a>
   <a class="blue item" href="notice.html">通知</a>
   <div class="right menu">
@@ -19,30 +18,32 @@
         <i class="search link icon"></i>
       </div>
     </div>
-    <a class="ui blue basic button" href="login.html">登出</a>
+    <a class="ui blue basic button">登出</a>
   </div>
 </div>
 
 <div class="ui center aligned grid">
   <div class="two wide column">
     <div class="ui vertical fluid tabular menu">
-      <a class="blue item" href="index.html">主页</a>
-      <a class="blue item" href="user_list.html">用户</a>
-      <a class="blue item" href="host_list.html">主机</a>
-      <a class="blue item" href="template_list.html">模板</a>
-        <a class="blue item active" href="image_list.html">镜像</a>
-        <a class="blue item" href="vm_list.html">虚拟机</a>
+        <a class="blue item" href="index.html">主页</a>
+        <a class="blue item" href="user.html">用户</a>
+        <a class="blue item" href="host.html">主机</a>
+        <a class="blue item" href="template.html">模板</a>
+        <a class="blue item  active" href="image.html">镜像</a>
+        <a class="blue item" href="vm.html">虚拟机</a>
     </div>
   </div>
-  <div class="thirteen wide stretched column">
+  <div class="fourteen wide stretched column">
     <div class="ui segment">
+        <div class="ui top attached tabular menu">
+            <a class="blue item active" data-tab="first">镜像列表</a>
+            <a class="blue item" data-tab="second">添加镜像</a>
+            <a class="blue item" data-tab="third">镜像信息</a>
+        </div>
+        <div class="ui bottom attached tab segment active" data-tab="first">
 
 
-
-
-      <button class="ui blue basic button">创建镜像</button>
-
-      <table class="ui celled table">
+            <table class="ui celled table">
         <thead>
         <tr>
           <th>名称</th>
@@ -98,14 +99,45 @@
           </tr>
         </tfoot>
       </table>
+        </div>
 
+        <div class="ui bottom attached tab segment" data-tab="second">
 
+            <form class="ui fluid form">
+                  <div class="inline field">
+                      <label>镜像名字</label>
+                      <input type="text" name="first-name" placeholder="镜像名字">
+                  </div>
+                  <div class="inline field">
+                    <label>选择模板</label>
+                    <select>
+                        <option value="">无</option>
+                        <option value="0">微型虚拟机模板</option>
+                        <option value="1">小型虚拟机模板</option>
+                        <option value="2">中型虚拟机模板</option>
+                        <option value="3">大型虚拟机模板</option>
+                    </select>
+                  </div>
+
+               <div class="inline field">
+              <label>镜像描述</label>
+              <textarea rows="3" style="margin-top: 0px; margin-bottom: 0px; height: 76px;"></textarea>
+          </div>
+          <button class="ui blue basic button" type="submit">添加</button>
+          </form>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="third">
+            这个页面只有点击编辑镜像信息时才会出现
+        </div>
 
 
   </div>
 </div>
 
 
-
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="dist/semantic.min.js"></script>
+    <script src="js/style.js"></script>
 </body>
 </html>
